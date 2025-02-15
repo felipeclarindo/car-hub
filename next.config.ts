@@ -1,7 +1,15 @@
-import type { NextConfig } from "next";
+import { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  transpilePackages: ["react-intersection-observer"],
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "cdn.imagin.studio",
+      },
+    ],
+  },
 };
 
 export default nextConfig;
